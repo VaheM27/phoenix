@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "806253104407",
+    "project_id": "fenix-bd79c2",
+    "storage_bucket": "fenix-bd79c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806253104407:android:0af257feaff25f7c0cbb52",
+        "android_client_info": {
+          "package_name": "com.fenix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "806253104407-mijqn91mdlucs5fskb14cl9auqr66ncs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkQ0OVFowL_2xcJiFj_WkHLHKW7o-vnOE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "806253104407-mijqn91mdlucs5fskb14cl9auqr66ncs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "806253104407-s2audkeuks129cg0vdlof7g0n07gtjks.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.fenix"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

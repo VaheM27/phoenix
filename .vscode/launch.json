@@ -1,0 +1,21 @@
+{
+  "configurations": [
+    {
+      "name": "Run iOS",
+      "request": "launch",
+      "type": "reactnative",
+      "cwd": "${workspaceFolder}",
+      "enableDebug": false,
+      "platform": "ios"
+    },
+    {
+      "name": "Debug Direct iOS - Experimental",
+      "request": "launch",
+      "type": "reactnativedirect",
+      "cwd": "${workspaceFolder}",
+      "platform": "ios",
+      "useHermesEngine": false,
+      "target": "simulator"
+    }
+  ]
+}
