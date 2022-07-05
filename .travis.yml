@@ -7,14 +7,14 @@ cache:
 
 install:
   - yarn install
-  - travis_wait mvn install
-  
+  - travis_wait 30
+
 script:
   - yarn start build
 
 deploy:
   provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
+  skip_cleanup: true
+  token: $GITHUB_TOKEN
   on:
     branch: main
