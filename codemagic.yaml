@@ -72,7 +72,7 @@ workflows:
           failure: false # To not receive a notification when a build fails
       google_play:
         # See the following link for information regarding publishing to Google Play - https://docs.codemagic.io/publishing-yaml/distribution/#google-play
-        credentials: ''
+        credentials: ' '
         track: alpha # Any default or custom track that is not in ‘draft’ status
   react-native-ios:
     name: React Native iOS
