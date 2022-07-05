@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   bottomSection: {
+    justifyContent: 'flex-end',
   },
   backButton: {
     position: 'absolute',
