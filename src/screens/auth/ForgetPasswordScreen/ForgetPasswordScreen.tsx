@@ -24,7 +24,6 @@ const styles = StyleSheet.create({
   },
   backButton: {
     position: 'absolute',
-    top: spacing.xxLarge,
     left: spacing.content,
   },
 });
