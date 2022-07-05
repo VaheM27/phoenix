@@ -1,11 +1,15 @@
 language: node_js
 node_js:
   - 16.15.1
-cache: yarn
+cache: 
+  - node_modules
+  - ios/Pods
 
 install:
   - yarn install
 
+script:
+  - yarn lint
 
 deploy:
   provider: pages
