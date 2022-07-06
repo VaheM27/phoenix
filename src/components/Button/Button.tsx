@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    borderColor: colors.primary,
+    borderColor: colors.black,
     borderWidth: 1,
   },
   buttonTextStyle: {
