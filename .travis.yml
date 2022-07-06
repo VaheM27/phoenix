@@ -11,8 +11,8 @@ os: osx
 dist: xenial
 
 install:
-  - yarn
-  - travis_wait 50 yarn
+  - yarn install
+  - travis_wait 50 yarn install
 
 script:
   - yarn start build
