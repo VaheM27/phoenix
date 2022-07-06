@@ -2,11 +2,10 @@ import React, {useState} from 'react';
 import {
   StyleSheet,
   TouchableOpacity,
-  TouchableOpacityProps,
   ActivityIndicator,
-  TextStyle,
   GestureResponderEvent,
   ViewStyle,
+  TouchableOpacityProps,
 } from 'react-native';
 import {colors, typography, spacing} from '~/theme';
 import Text from '../Text';
@@ -36,7 +35,6 @@ const styles = StyleSheet.create({
 });
 
 interface Props extends TouchableOpacityProps {
-  waitAsync?: boolean;
   color?: string;
   textColor?: string;
   textVariant?: keyof typeof typography;
@@ -44,7 +42,6 @@ interface Props extends TouchableOpacityProps {
   isOutlined?: boolean;
   text?: string;
   children?: React.ReactNode;
-  textStyle?: TextStyle;
   top?: keyof typeof spacing;
   start?: keyof typeof spacing;
   end?: keyof typeof spacing;
@@ -58,12 +55,10 @@ export default function Button(props: Props) {
   const {
     color = colors.primary,
     textColor = colors.white,
-    textStyle,
     textVariant = 'body1Regular',
     loading,
     text,
     children,
-    waitAsync,
     isOutlined,
     onPress,
     style,
