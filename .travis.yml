@@ -2,13 +2,8 @@ language: node_js
 node_js:
   - 16.15.1
 cache:
-  yarn: true
-  cocoapods: true
-  directories:
-    - node_modules
-
-os: osx
-dist: xenial
+  - node_modules
+  - yarn
 
 install:
   - yarn install
@@ -16,6 +11,9 @@ install:
 
 script:
   - yarn start build
+
+os: linux
+dist: xenial
 
 deploy:
   provider: pages
