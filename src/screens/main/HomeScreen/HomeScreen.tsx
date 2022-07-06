@@ -189,9 +189,9 @@ const styles = StyleSheet.create({
     backgroundColor: colors.background,
   },
   sectionHeader: {
-    backgroundColor: colors.white,
+    backgroundColor: colors.black,
     textAlign: 'center',
     paddingVertical: spacing.smaller,
-    color: colors.black,
+    color: colors.white,
   },
 });
