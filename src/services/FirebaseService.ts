@@ -1,13 +1,12 @@
 import auth from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
 import Geolocation from '@react-native-community/geolocation';
-import { createGeoPoint, getCurrentPositionAsync, toEnglishDigits } from '~/helpers';
+import {toEnglishDigits, createGeoPoint} from '~/helpers';
 import Listing from '~/models/Listing';
 
 import storage from '@react-native-firebase/storage';
 import Comment from '~/models/Comment';
 import Notification from '~/models/Notification';
-import { getCityName } from '~/helpers'
 
 class FirebaseService {
   userUid = auth().currentUser?.uid;

@@ -1,20 +1,8 @@
-import React, {FC, useRef, useState} from 'react';
+import React, {FC, useState} from 'react';
 import RNPickerSelect from 'react-native-picker-select';
 import {colors, font, spacing, typography} from '~/theme';
-import {
-  View,
-  Image,
-  TouchableOpacity,
-  SafeAreaView,
-  Dimensions,
-  StyleSheet,
-  TextInputProps,
-  ViewStyle,
-  TextInput as RNTextInput,
-} from 'react-native';
+import {View, StyleSheet, TextInputProps, ViewStyle} from 'react-native';
 import {Text} from '..';
-import {brandOptions} from '~/constants';
-import Icon from 'react-native-vector-icons/SimpleLineIcons';
 
 interface optionType {
   label: string;
@@ -46,9 +34,6 @@ const Dropdown: FC<Props> = props => {
     title,
     containerStyle,
     inputContainerStyle,
-    style,
-    renderRight,
-    inputRef,
     required,
     placeholder,
     errorMessage,
@@ -58,8 +43,6 @@ const Dropdown: FC<Props> = props => {
     options,
     onSelect,
   } = props;
-
-  const pickerRef = useRef<RNPickerSelect>(null);
 
   return (
     <View style={[styles.container, containerStyle]}>

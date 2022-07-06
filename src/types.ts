@@ -11,5 +11,5 @@ export type Offer = {
   askingPrice: number | string;
   distance: string;
   cityName: string;
-  pictures: string[]
+  pictures: string[];
 };

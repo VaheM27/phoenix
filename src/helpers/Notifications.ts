@@ -1,6 +1,5 @@
 import messaging from '@react-native-firebase/messaging';
 import auth from '@react-native-firebase/auth';
-import {Alert} from 'react-native';
 import {Api} from '~/utils';
 import {Endpoints} from '~/config';
 import Notification from '~/models/Notification';

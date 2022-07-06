@@ -1,6 +1,5 @@
-import {action, computed, makeObservable, observable} from 'mobx';
-import auth, {FirebaseAuthTypes} from '@react-native-firebase/auth';
-import firestore from '@react-native-firebase/firestore';
+import {action, makeObservable, observable} from 'mobx';
+import auth from '@react-native-firebase/auth';
 import Comment from '~/models/Comment';
 import FirebaseService from '~/services/FirebaseService';
 import {profileStore} from './profile.store';

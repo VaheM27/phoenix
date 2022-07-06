@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from 'react';
+import React, {useState} from 'react';
 import {
   StyleSheet,
   TouchableOpacity,
@@ -9,7 +9,6 @@ import {
   ViewStyle,
 } from 'react-native';
 import {colors, typography, spacing} from '~/theme';
-import {debounce} from 'lodash';
 import Text from '../Text';
 
 const styles = StyleSheet.create({
@@ -63,9 +62,7 @@ export default function Button(props: Props) {
     textVariant = 'body1Regular',
     loading,
     text,
-    disabled,
     children,
-    waitAsync,
     isOutlined,
     onPress,
     style,

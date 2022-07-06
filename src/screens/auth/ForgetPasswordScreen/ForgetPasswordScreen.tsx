@@ -8,7 +8,6 @@ import auth from '@react-native-firebase/auth';
 import {CompositeScreenProps} from '@react-navigation/core';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {colors, spacing} from '~/theme';
-import {use} from 'i18next';
 import {useTranslation} from 'react-i18next';
 
 const styles = StyleSheet.create({
@@ -19,8 +18,6 @@ const styles = StyleSheet.create({
   contentContainer: {
     flex: 0.8,
     justifyContent: 'center',
-  },
-  bottomSection: {
   },
   backButton: {
     position: 'absolute',
@@ -80,7 +77,7 @@ const ForgetPasswordScreen: React.FC<CompositeScreenProps<any, any>> = ({
           />
         </View>
 
-        <View style={styles.bottomSection}>
+        <View>
           <Button
             top={'small'}
             loading={loading}

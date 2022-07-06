@@ -2,9 +2,6 @@ import {useState} from 'react';
 import {
   launchImageLibrary,
   ImageLibraryOptions,
-  ImagePickerResponse,
-  Asset,
-  PhotoQuality,
 } from 'react-native-image-picker';
 
 export const useImagePicker = (

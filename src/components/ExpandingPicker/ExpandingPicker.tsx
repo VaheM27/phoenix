@@ -1,9 +1,7 @@
 import React, {FC, useEffect, useState} from 'react';
 import {
   View,
-  Image,
   TouchableOpacity,
-  SafeAreaView,
   StyleSheet,
   FlatList,
   ViewStyle,

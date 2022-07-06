@@ -6,7 +6,6 @@ const primary = '#000000';
 const blue = '#1C92FF';
 const red = '#FF2F2F';
 const grey = '#cacaca';
-const fullBlack = '#000';
 const green = '#259100';
 const darkGrey = '#8A8A8E';
 export const colors = {

@@ -1,5 +1,3 @@
-import {colors} from './colors';
-
 const type = {
   regular: 'SFProText-Regular',
   medium: 'SFProText-Medium',

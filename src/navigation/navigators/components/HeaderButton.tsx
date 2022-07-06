@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {TouchableOpacity, View, ViewStyle} from 'react-native';
+import {TouchableOpacity, ViewStyle} from 'react-native';
 
 interface HeaderButtonProps {
   Icon: any;

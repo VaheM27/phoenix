@@ -15,10 +15,6 @@ import {authStore} from './src/store/auth.store';
 import {LogBox} from 'react-native';
 import {gestureHandlerRootHOC} from 'react-native-gesture-handler';
 import CodePush from 'react-native-code-push';
-import FirebaseService from '~/services/FirebaseService';
-import messaging from '@react-native-firebase/messaging';
-import Notifications from '~/helpers/Notifications';
-import {useNavigation} from '@react-navigation/native';
 
 console.ignoredYellowBox = [];
 console.disableYellowBox = true;

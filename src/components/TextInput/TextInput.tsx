@@ -109,7 +109,6 @@ export default function TextInput(props: Props) {
     color,
     errored,
     variant,
-    onSelect,
     renderLeft,
   } = props;
 

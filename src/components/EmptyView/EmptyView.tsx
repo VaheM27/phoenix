@@ -1,5 +1,4 @@
-import AnimatedLottieView from 'lottie-react-native';
-import React, {useCallback} from 'react';
+import React from 'react';
 import {
   StyleSheet,
   ViewProps,
@@ -43,18 +42,11 @@ interface Props extends ViewProps, EmptyStateProps, ErrorStateProps {
 }
 
 export default function EmptyView(props: Props) {
-  const {style, isFailed, isLoading, flex, renderLoader, ...rest} = props;
+  const {style, isFailed, isLoading, flex, ...rest} = props;
 
   const customStyle: ViewStyle = {
     flex: Number(!!flex), // If true then 1 else 0
   };
-
-  const Loader = useCallback(() => {
-    if (typeof renderLoader === 'function') {
-      return renderLoader({});
-    }
-    return <ActivityIndicator color={colors.primary} />;
-  }, [renderLoader]);
 
   return (
     <View style={[styles.container, customStyle, style]} {...rest}>

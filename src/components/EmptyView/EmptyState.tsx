@@ -4,7 +4,7 @@ import {StyleSheet, View} from 'react-native';
 import {colors, spacing} from '../../theme';
 import Text from '../Text';
 
-const styles = StyleSheet.create({
+StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',

@@ -1,5 +1,4 @@
 import {action, makeObservable, observable} from 'mobx';
-import _, {findIndex} from 'lodash';
 import Notification from '~/models/Notification';
 import FirebaseService from '~/services/FirebaseService';
 

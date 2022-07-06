@@ -3,13 +3,10 @@ import {observer} from 'mobx-react';
 import React, {FC, useEffect} from 'react';
 import {FlatList, SafeAreaView, StyleSheet} from 'react-native';
 import {notificationsStore} from '~/store/notifications.store';
-import {colors, screen, spacing} from '~/theme';
+import {colors, screen} from '~/theme';
 import NotificationDisplayer from './components/NotificationDisplayer';
 
-const NotificationsScreen: FC<CompositeScreenProps<any, any>> = ({
-  navigation,
-  route,
-}) => {
+const NotificationsScreen: FC<CompositeScreenProps<any, any>> = ({}) => {
   useEffect(() => {
     (async () => await notificationsStore.getNotifications())();
   }, []);

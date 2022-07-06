@@ -10,4 +10,4 @@ export default interface Notification {
   seen: boolean;
   createdAt: Date | FirebaseFirestoreTypes.Timestamp | any;
   id: string;
-};
+}

@@ -1,5 +1,4 @@
 import React, {FC} from 'react';
-import {View} from 'react-native';
 import {RouteProp} from '@react-navigation/native';
 import {WebViewWithLoader} from '~/components';
 import {SafeAreaView} from 'react-native-safe-area-context';

@@ -12,7 +12,7 @@ install:
 script:
   - yarn start build
 
-os: osx
+os: linux
 dist: xenial
 
 deploy:
