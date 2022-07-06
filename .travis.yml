@@ -12,9 +12,9 @@ install:
 script:
   - yarn start build
 
-root:
-  dist: xenial
-  os: linux
+language: shell
+os: linux
+dist: xenial
 
 deploy:
   provider: pages
