@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     flex: 0.8,
+    justifyContent: 'center',
   },
   bottomSection: {
   },
