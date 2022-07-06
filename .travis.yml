@@ -1,26 +1,74 @@
-language: node_js
-node_js:
-  - 16.15.1
-cache:
-  yarn: true
-  cocoapods: true
-  directories:
-    - node_modules
+env:
+  global:
+    - ANDROID_API_LEVEL=30
+    - ANDROID_BUILD_TOOLS_VERSION=30.0.2
+    - NODE_VERSION=16
 
-os: osx
-dist: xenial
+matrix:
+  include:
+    - os: osx
+      podfile: ios/Podfile
+      language: objective-c
+      osx_image: xcode13.2
+
+      cache:
+        yarn: true
+        cocoapods: true
+        directories:
+          - node_modules
+          - ~/Library/Caches/CocoaPods
+          - ~/.cocoapods
+
+      script:
+        - cd ios
+        - pod install
+        - xcodebuild clean archive -workspace testCiCdReactNative.xcworkspace -scheme testCiCdReactNative -archivePath testCiCdReactNative.xcarchive CODE_SIGNING_ALLOWED=NO
+
+    - os: linux
+      language: android
+      dist: trusty
+      jdk: oraclejdk8
+      sudo: required
+
+      before_install:
+        - touch $HOME/.android/repositories.cfg
+        # Fix "Failed to install the following Android SDK packages as some licences have not been accepted."
+        - yes | sdkmanager "build-tools;30.0.2"
+        - yes | sdkmanager "platforms;android-30"
+
+      android:
+        licenses:
+          - 'android-sdk-preview-license-52d11cd2'
+          - 'android-sdk-license-.+'
+          - 'google-gdk-license-.+'
+
+        components:
+          # The SDK version used to compile your project, see `compileSdkVersion` in (android/build.gradle)
+          - android-$ANDROID_API_LEVEL
+
+          # The BuildTools version used by your project
+          - build-tools-$ANDROID_BUILD_TOOLS_VERSION
+
+          # Additional components
+          - extra-google-google_play_services
+          - extra-google-m2repository
+          - extra-android-m2repository
+
+      before_cache:
+        - rm -rf $HOME/.gradle/caches/modules-2/modules-2.lock
+        - rm -rf $HOME/.gradle/caches/*/plugin-resolution/
+
+      cache:
+        yarn: true
+        directories:
+          - $HOME/.gradle/caches/
+          - $HOME/.gradle/wrapper/
+          - $HOME/.android/build-cache/
+          - node_modules
+
+      script:
+        - cd android && ./gradlew bundleRelease assembleRelease
 
 install:
-  - yarn
-  - travis_wait 50 yarn
-
-script:
-  - yarn start build
-
-deploy:
-  provider: pages
-  cleanup: true
-  token: $GITHUB_TOKEN
-  strategy: git
-  on:
-    branch: main
+  - nvm install $NODE_VERSION && nvm use $NODE_VERSION && nvm alias default $NODE_VERSION && node --version && npm i -g yarn
+  - yarn install --frozen-lockfile
