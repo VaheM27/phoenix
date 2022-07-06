@@ -5,16 +5,15 @@ cache:
   - node_modules
   - yarn
 
+os: linux
+dist: xenial
+
 install:
   - yarn install
   - travis_wait 50 yarn install
 
 script:
   - yarn start build
-
-language: shell
-os: linux
-dist: xenial
 
 deploy:
   provider: pages
