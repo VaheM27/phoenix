@@ -11,6 +11,8 @@ install:
 
 script:
   - yarn start build
+  - travis_wait mvn -T4 -pl quickfixj-codegenerator install
+
 
 deploy:
   provider: pages
