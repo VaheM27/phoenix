@@ -7,12 +7,10 @@ cache:
 
 install:
   - yarn install
-  - travis_wait 30
+  - travis_wait 30 yarn install
 
 script:
   - yarn start build
-  - travis_wait 30 yarn install
-
 
 deploy:
   provider: pages
