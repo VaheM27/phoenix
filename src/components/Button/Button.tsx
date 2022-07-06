@@ -63,6 +63,7 @@ export default function Button(props: Props) {
     loading,
     text,
     children,
+    waitAsync,
     isOutlined,
     onPress,
     style,
@@ -83,7 +84,7 @@ export default function Button(props: Props) {
   const content = children || (
     <Text
       variant={textVariant}
-      style={[styles.buttonTextStyle, textStyle]}
+      style={[styles.buttonTextStyle]}
       color={buttonTextColor}
       text={text}
     />

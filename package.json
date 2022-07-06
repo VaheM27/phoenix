@@ -31,6 +31,7 @@
     "appcenter-analytics": "^4.4.3",
     "appcenter-crashes": "^4.4.3",
     "axios": "^0.24.0",
+    "build": "^0.1.4",
     "eslint-plugin-react-hooks": "^4.2.1-rc.0-next-419ccc2b1-20220217",
     "formik": "^2.2.9",
     "geofirex": "^0.1.0",
