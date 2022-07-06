@@ -7,7 +7,8 @@ cache:
 
 install:
   - yarn install
-  - travis_wait 30 yarn install
+
+install: travis_wait 30 yarn install
 
 script:
   - yarn start build
