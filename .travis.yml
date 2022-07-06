@@ -2,15 +2,17 @@ language: node_js
 node_js:
   - 16.15.1
 cache:
-  - node_modules
-  - yarn
+  yarn: true
+  cocoapods: true
+  directories:
+    - node_modules
 
-os: linux
+os: osx
 dist: xenial
 
 install:
-  - yarn install
-  - travis_wait 50 yarn install
+  - yarn
+  - travis_wait 50 yarn
 
 script:
   - yarn start build
