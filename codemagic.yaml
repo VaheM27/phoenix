@@ -1,3 +1,7 @@
+workflows:
+  my-workflow:
+    name: My workflow name
+
 language: node_js
 node_js:
   - 16.15.1
