@@ -192,6 +192,6 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
     textAlign: 'center',
     paddingVertical: spacing.smaller,
-    color: colors.red,
+    color: colors.black,
   },
 });
