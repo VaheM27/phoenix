@@ -21,4 +21,4 @@ deploy:
   token: $GITHUB_TOKEN
   strategy: git
   on:
-    branch: main
+    branch: gh-pages
