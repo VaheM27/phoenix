@@ -189,7 +189,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.background,
   },
   sectionHeader: {
-    backgroundColor: colors.white,
+    backgroundColor: colors.red,
     textAlign: 'center',
     paddingVertical: spacing.smaller,
     color: colors.black,
