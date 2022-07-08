@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+  - 16.15.1
+cache:
+  - node_modules
+  - yarn
+
+install:
+  - yarn install
+  - travis_wait 50 yarn install
+
+script:
+  - yarn add build
+
+os: linux
+dist: xenial
+
+deploy:
+  provider: pages
+  cleanup: true
+  token: $GITHUB_TOKEN
+  strategy: git
+  on:
+    branch: main

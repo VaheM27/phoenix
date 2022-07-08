@@ -1,0 +1,24 @@
+/**
+ * Stack
+ *  "Auth"
+ *    "SIGN_IN"
+ *    "SIGN_UP"
+ *    "FORGOT_PASSWORD"
+ *  "App"
+ */
+
+export const SCREEN_KEYS = {
+  // Auth Stack
+  ONBOARDING: 'ONBOARDING',
+  SIGN_IN: 'SIGN_IN',
+  SIGN_UP: 'SIGN_UP',
+  FORGOT_PASSWORD: 'FORGOT_PASSWORD',
+  WEBVIEW: 'WEBVIEW',
+  // App Stack
+  SPLASH: 'SPLASH',
+  POST_OFFER: 'POST_OFFER',
+  HOME: 'HOME',
+  OFFER_DETAILS: 'OFFER_DETAILS',
+  PROFILE: 'PROFILE',
+  NOTIFICATIONS: 'NOTIFICATIONS',
+};
